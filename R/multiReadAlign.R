@@ -32,7 +32,7 @@ multiReadAlign <- function(reads, groups, max.error=NA, match=0, mismatch=-1, ga
     all.results <- unlist(all.results, recursive=FALSE)
 
     # Collating the results into a single DF.
-    out <- new("DataFrame", nrows=length(by.group))
+    out <- new("DFrame", nrows=length(by.group))
     out$alignments <- as(all.results, "List")
     rownames(out) <- names(by.group)
 
